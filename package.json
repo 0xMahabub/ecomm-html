@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.0.24"
+  },
+  "scripts": {
+    "dev": "live-server",
+    "watch": "yarn tailwindcss -i ./tailwind.css -o ./assets/css/app.css --watch"
+  }
+}
