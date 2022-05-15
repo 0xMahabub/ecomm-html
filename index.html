@@ -11,15 +11,15 @@
     <main class="w-full min-h-screen bg-gray-100">
         <header class="w-full m-0 p-0 flex flex-col">
             <!--Main Menu Area-->
-            <nav id="main_area" class="flex flex-col w-full">
+            <nav id="main_area" class="hidden lg:flex flex-col w-full">
                 <!--TopNavBar-->
                 <nav id="topNav" class="flex items-center py-2 w-full bg-white border-b-2 border-gray-100">
                     <div class="container">
                         <ul class="list-none pl-0 flex items-center gap-x-6 mr-auto">
-                            <li><a href="#" class="text-gray-500 capitalize">about</a></li>
-                            <li><a href="#" class="text-gray-500 capitalize">store location</a></li>
-                            <li><a href="#" class="text-gray-500 capitalize">order tracking</a></li>
-                            <li><a href="#" class="text-gray-500 capitalize">call: +(880) 1629 235 526</a></li>
+                            <li><a href="#" class="text-gray-500 hover:text-gray-700 capitalize">about</a></li>
+                            <li><a href="#" class="text-gray-500 hover:text-gray-700 capitalize">store location</a></li>
+                            <li><a href="#" class="text-gray-500 hover:text-gray-700 capitalize">order tracking</a></li>
+                            <li><a href="#" class="text-gray-500 hover:text-gray-700 capitalize">call: +(880) 1629 235 526</a></li>
                         </ul>
     
                         <ul class="list-none ml-auto pl-0 flex items-center justify-end gap-x-6">
@@ -85,7 +85,7 @@
                                     </svg>
                                 </a>
 
-                                <ul class="hidden group-hover:flex group-hover:visible z-50 translate-y-5 group-hover:translate-y-0 transition-all flex-col xl:min-w-[200px] absolute top-[100.5%] left-0 shadow-sm border-t-2 border-orange-500 list-none pl-0 bg-white text-gray-600">
+                                <ul class="hidden group-hover:flex group-hover:visible z-50 translate-y-5 group-hover:translate-y-0 transition-all flex-col lg:min-w-[150px] xl:min-w-[200px] absolute top-[100.5%] left-0 shadow-sm border-t-2 border-orange-500 list-none pl-0 bg-white text-gray-600">
                                     <li><a href="#" class="flex items-center hover:text-orange-500 capitalize py-3 px-5 border-b-2 border-gray-100">404 page</a></li>
                                     <li><a href="#" class="flex items-center hover:text-orange-500 capitalize py-3 px-5 border-b-2 border-gray-100">cart page</a></li>
                                     <li><a href="#" class="flex items-center hover:text-orange-500 capitalize py-3 px-5 border-b-2 border-gray-100">wishlist page</a></li>
@@ -101,6 +101,42 @@
 
             </nav>
             <!--//Main Menu Area-->
+
+
+            <!--Mobile Menu-->
+            <nav id="mobileMenu" class="lg:hidden flex w-full flex-col bg-transparent fixed bottom-5 left-0 items-center justify-center z-50">
+                <div id="mobileMenu_container" class="bg-white flex py-3 px-5 mx-auto shadow rounded-md gap-x-4">
+                    <a href="#" class="hover:text-orange-500 inline-flex gap-y-1 flex-col justify-center items-center py-2 px-2 rounded-sm capitalize">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        </svg>
+                        <span class="text-xs">home</span>
+                    </a>
+
+                    <a href="#" class="hover:text-orange-500 inline-flex gap-y-1 flex-col justify-center items-center py-2 px-2 rounded-sm capitalize">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                          </svg>
+                        <span class="text-xs">shop</span>
+                    </a>
+
+                    <a href="#" class="hover:text-orange-500 relative inline-flex gap-y-1 flex-col justify-center items-center py-2 px-2 rounded-sm capitalize">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                          </svg>
+                        <span class="text-xs">cart</span>
+                        <span class="absolute flex items-center justify-center w-4 h-4 rounded-full bg-green-500 text-white text-xs top-1 right-0">2</span>
+                    </a>
+
+                    <a href="#" class="hover:text-orange-500 inline-flex gap-y-1 flex-col justify-center items-center py-2 px-2 rounded-sm capitalize">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                          </svg>
+                        <span class="text-xs">account</span>
+                    </a>
+                </div>
+            </nav>
+            <!--//Mobile Menu-->
         </header>
 
         <!-- <footer class="bg-gray-200 py-3 flex"></footer> -->
